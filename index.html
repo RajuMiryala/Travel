@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="../project3/Boostrap/css/bootstrap.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+       .bg-teal{
+        background-color: teal;
+       }
+       .container{
+        display: flex;
+       
+       }
+       .carousel-caption{
+        bottom: 200px; 
+    }
+    #icon{
+        align-items: center;
+    }
+    #scroll{
+        height: 200px;
+        position: relative; 
+        overflow: hidden;
+        overflow: scroll;
+    }
+    .styUl {
+        background-color: aqua;
+        border: 1px solid black;
+        font-size: 12px;
+        font-family: cursive;
+      }
+      .scanner h4{
+        color:#d5d9ed;
+        font-size: 30px;
+        position: absolute;
+         padding-left: 10px;
+        
+      }
+      .scanner h4:before{
+        content: "Scanning...";
+        position: absolute;
+        top: 0px;
+        left: 6px;
+        width: 0;
+        height: 100%;
+        border-right: 4px solid rgb(8, 166, 213);
+        box-shadow: 0 0 5px 2px #05dfe7;
+        overflow: hidden;
+        animation: scan 5s linear infinite;
+
+      }
+      #link ul li{
+        border: 2px solid aqua;
+        margin: 2px;
+      }
+      @keyframes scan{
+        0%,10%,100%{
+            width: 0;
+        }
+        60%,80%{
+            width: 100%;
+        }
+      }
+      
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-sm navbar-dark bg-teal"id="ch">
+        <div class="container">
+            <a href="C:\Users\rajum\OneDrive\Desktop\raju\task.html"class="navbar-brand"><i class="fa fa-plane-departure p-3"></i>Travel Yari</a>
+            <button class="navbar-toggler"data-toggle="collapse"data-target="#link">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse"id="link">
+                <ul class="navbar-nav mx-auto p-3 ">
+                    <li class="nav-item px-3"><a href="" class="nav-link">Home</a></li>
+                    <li class="nav-item px-3"><a href="#search" class="nav-link">Search</a></li>
+                    <li class="nav-item px-3"><a href="#fix" class="nav-link">About Us</a></li>
+                    <li class="nav-item px-3"><a href="#gallery" class="nav-link">Visiting Spot</a></li>
+                    <li class="nav-item px-3"><a href="#cards" class="nav-link">Gallery</a></li>
+                    <li class="nav-item px-3"><a href="categories.html" class="nav-link">Contact</a></li>
+                    <!-- <button class="bg-info m-2"id="tic">Bg-Change</button>
+                    <button class="bg-info m-2"id="nochange">Normal Bg</button> -->
+                    <div class="scanner">
+                        <h4>Scanning...</h4>
+                    </div>
+                    <!-- <div class="spinner-grow text-info m-2"></div>
+                    <div class="spinner-grow text-danger m-2"></div>
+                    <div class="spinner-grow text-white m-2"></div>
+                    <div class="spinner-grow text-dar m-2"></div> -->
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!--slider--->
+    <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="images/slider_one.jpg" class="d-block w-100" alt="...">
+            <div class="carousel-caption text-left animated zoomIn delay-1s">
+                <h5 class="display-4">Feel the Joy</h5>
+                <p class="lead">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque non itaque, officiis impedit voluptate sit aspernatur maiores et sed nulla aperiam suscipit! Velit laudantium obcaecati saepe nihil, aliquid accusantium! At!</p>
+                <button class="btn btn-info">Read more</button>
+            
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img src="images/slider_two.jpg" class="d-block w-100" alt="...">
+            <div class="carousel-caption text-rightx animated zoomIn delay-1s">
+                <h5 class="display-4">Feel the Joy</h5>
+                <p class="lead">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque non itaque, officiis impedit voluptate sit aspernatur maiores et sed nulla aperiam suscipit! Velit laudantium obcaecati saepe nihil, aliquid accusantium! At!</p>
+                <button class="btn btn-info">Read more</button>
+
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img src="images/slider_three.jpg" class="d-block w-100" alt="...">
+            <div class="carousel-caption text-left animated zoomIn delay-1s">
+                <h5 class="display-4">Feel the Joy</h5>
+                <p class="lead">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque non itaque, officiis impedit voluptate sit aspernatur maiores et sed nulla aperiam suscipit! Velit laudantium obcaecati saepe nihil, aliquid accusantium! At!</p>
+                <button class="btn btn-info">Read more</button>
+            
+            </div>
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+    <!-- <section>
+        <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img src="images/slider_one.jpg" class="d-block w-100" alt="...">
+                <div class="carousel-caption text-left animated zoomIn delay-1s">
+                    <h5 class="display-4">Feel the Joy</h5>
+                    <p class="lead">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque non itaque, officiis impedit voluptate sit aspernatur maiores et sed nulla aperiam suscipit! Velit laudantium obcaecati saepe nihil, aliquid accusantium! At!</p>
+                    <button class="btn btn-info">Read more</button>
+                
+                </div>
+            </div>
+              <div class="carousel-item">
+                <img src="images/slider_two.jpg" class="d-block w-100" alt="...">
+              </div>
+              <div class="carousel-item">
+                <img src="images/slider_three.jpg" class="d-block w-100" alt="...">
+              </div>
+            </div>
+            
+        </div>
+</section> -->
+    <!--slider--->
+    <!---search section-->
+        <section class="p-3 bg-teal text-white"id="search">
+            <div class="container">
+                <div class="row">
+                    <div class="col">
+                        <h5 class="display-4">Search Your Destination</h5>
+                        <p class="lead">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aliquid, qui rerum. Numquam doloribus, sed vero porro modi eos optio minus voluptas atque, fugit corrupti a fugiat unde totam culpa deserunt.</p>
+                        <div class="col-md-group">
+                            <form action="">
+                                <div class="form-group">
+                                    <input type="search" class="form-control"placeholder="Search Here">
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    <!---search section-->
+    <!--Cards-->
+        <section class="bg-light p-3"id="cads">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="card text-center">
+                        <div class="card-body">
+                            <i class="fa fa-location-arrow fa-4x text-teal"></i>
+                            <p class="h2">Pick Location</p>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit error rem eum accusantium maiores. At, quia ab animi totam molestias sequi, quas nulla rem esse nemo ratione consequatur perferendis illum.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                        <div class="card text-center">
+                        <div class="card-body">
+                            <i class="fa fa-building fa-4x text-teal"></i>
+                            <p class="h2">Shop Travel</p>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit error rem eum accusantium maiores. At, quia ab animi totam molestias sequi, quas nulla rem esse nemo ratione consequatur perferendis illum.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card text-center">
+                    <div class="card-body">
+                        <i class="fa fa-plane-departure fa-4x text-teal"></i>
+                        <p class="h2">Fly Chat</p>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit error rem eum accusantium maiores. At, quia ab animi totam molestias sequi, quas nulla rem esse nemo ratione consequatur perferendis illum.</p>
+                    </div>
+                </div>
+            </div>
+            </div>
+        </div>
+        </section>
+    <!--Cards-->
+    <!--images-->
+        <section class="p-3"id="places">
+            <div class="container">
+                <div class="col text-center">
+                    <h5 class="display-4 ">
+                        <span class="text-info">Popular</span>Places
+                    </h5>
+                    <p class="lead">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Culpa, eum!</p>
+                </div>
+            </div>
+            <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="card">
+                        <img src="images/card_1.jpg" alt="" class="img-fluid">
+                        <div class="card-body">
+                            <h3 class="card-title">Munnar,Kerala</h3>
+                            <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. At aspernatur dolorum ducimus tempora.</p>
+                            <button class="btn btn-info">Read more</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card">
+                        <img src="images/card_2.jpg" alt="" class="img-fluid">
+                        <div class="card-body">
+                            <h3 class="card-title">Hyderabad</h3>
+                            <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. At aspernatur dolorum ducimus tempora.</p>
+                            <button class="btn btn-info">Read more</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card">
+                        <img src="images/card_3.jpg" alt="" class="img-fluid">
+                        <div class="card-body">
+                            <h3 class="card-title">Pandichery</h3>
+                            <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. At aspernatur dolorum ducimus tempora.</p>
+                            <button class="btn btn-info">Read more</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            </div>
+            <div class="row mt-3">
+                <div class="col text-center">
+                    <button class="btn btn-dark btn-lg">
+                        <i class="fa fa-play pr-2"></i>Start Booking
+                    </button>
+                </div>
+        </div>
+        </section>    
+    <!--images-->
+    <!---social icons-->
+        <section class="p-3 bg-teal text-white">
+            <div class="container text-center">
+                <div class="row">
+                    <div class="col text-center"id="icon">
+                        <h1>Follow Travel</h1>
+                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ipsam omnis iure, ad placeat adipisci voluptas obcaecati rerum repellat asperiores at ea culpa quaerat maxime eos officia odit doloremque nulla sed? </p>
+                        <i class="fab fa-facebook-square fa-4x m-3"></i>
+                        <i class="fab fa-youtube fa-4x m-3"></i>
+                        <i class="fab fa-twitter fa-4x m-3"></i>
+                        <i class="fab fa-google-plus-square fa-4x m-3"></i>
+                    </div>
+                </div>
+            </div>
+        </section>
+    <!---social icons-->
+    <!---photo gallery-->
+        <section class="p-3" id="gallery">
+            <div class="container">
+                <div class="row">
+                <div class="col text-center">
+                    <h5 class="display-4">
+                        <span class="text-info">Photo</span>Gallery
+                    </h5>
+                    <p class="lead">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Molestias, expedita suscipit facilis quisquam fugiat adipisci neque placeat atque reiciendis blanditiis nostrum cumque, delectus, odio esse! Excepturi veniam fugiat neque! Minus!</p>
+                </div>
+            </div>
+            </div>
+            <div class="container p-4">
+            <div class="row">
+                <div class="col-md-3">
+                    <img src="images/gallery_1.jpg" class="img-fluid"alt="">
+                </div>
+                <div class="col-md-3">
+                    <img src="images/gallery_2.jpg" class="img-fluid"alt="">
+                </div>
+                <div class="col-md-3">
+                    <img src="images/gallery_3.jpg" class="img-fluid"alt="">
+                </div>
+                <div class="col-md-3">
+                    <img src="images/gallery_4.jpg" class="img-fluid"alt="">
+                </div>
+            </div>
+            </div>
+            <div class="container p-4">
+                <div class="row">
+                    <div class="col-md-3">
+                        <img src="images/gallery_5.jpg" class="img-fluid"alt="">
+                    </div>
+                    <div class="col-md-3">
+                        <img src="images/gallery_6.jpg" class="img-fluid"alt="">
+                    </div>
+                    <div class="col-md-3">
+                        <img src="images/gallery_7.jpg" class="img-fluid"alt="">
+                    </div>
+                    <div class="col-md-3">
+                        <img src="images/gallery_8.jpg" class="img-fluid"alt="">
+                    </div>
+                </div>
+                </div>
+                <div class="container p-4">
+                    <div class="row">
+                        <div class="col-md-3">
+                            <img src="images/gallery_9.jpg" class="img-fluid"alt="">
+                        </div>
+                        <div class="col-md-3">
+                            <img src="images/gallery_10.jpg" class="img-fluid"alt="">
+                        </div>
+                        <div class="col-md-3">
+                            <img src="images/gallery_11.jpg" class="img-fluid"alt="">
+                        </div>
+                        <div class="col-md-3">
+                            <img src="images/gallery_12.jpg" class="img-fluid"alt="">
+                        </div>
+                    </div>
+                    </div>
+                    <div class="container p-4">
+                        <div class="row">
+                            <div class="col-md-3">
+                                <img src="images/gallery_13.jpg" class="img-fluid"alt="">
+                            </div>
+                            <div class="col-md-3">
+                                <img src="images/gallery_14.jpg" class="img-fluid"alt="">
+                            </div>
+                            <div class="col-md-3">
+                                <img src="images/gallery_15.jpg" class="img-fluid"alt="">
+                            </div>
+                            <div class="col-md-3">
+                                <img src="images/gallery_16.jpg" class="img-fluid"alt="">
+                            </div>
+                        </div>
+                        </div>
+                    </div>
+            
+        </div>
+        </section>
+    <!---photo gallery-->
+    <!----contact gallery-->
+    <section class="p-3">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="card">
+                        <div class="card-body bg-teal text-center text-white">
+                        <i class="fa fa-envelope fa-4x"></i>
+                        <h2>Contact For Booking</h2>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae hic repudiandae deserunt maiores iusto vero totam repellendus dolore quia dolores, nesciunt vitae officia quod quam, soluta qui veniam, suscipit illum!</p>
+                        </div>
+                     </div>
+                     <ul class="list-group">
+                        <li class="list-group-item">
+                            <h3>Location</h3>
+                        </li>
+                        <li class="list-group-item">
+                            Travel Yari Pvt Ltd
+                        </li>
+                        <li class="list-group-item">
+                            Jublee Hills,Hyderabad
+                        </li>
+                        <li class="list-group-item">
+                            Telangana,India
+                        </li>
+                     </ul>
+                </div>
+            <div class="col-md-6">
+                <div class="card">
+                    <div class="card-header bg-teal text-white text-center">
+                        <h3>Contact Us</h3>
+                    </div>
+                <div class="card-body bg-light">
+                    <form>
+                        <div class="form-group p-3">
+                            <input type="text" class="form-control"placeholder="Name">
+                        </div>
+                        <div class="form-group p-3">
+                            <input type="email" class="form-control"placeholder="Email">
+                        </div>
+                        <div class="form-group p-3">
+                            <input type="number" class="form-control"placeholder="Mobile Number">
+                        </div>
+                        <div class="form-group p-3">
+                            <textarea class="form-control"rows="5" placeholder="Your Message"></textarea>
+                        </div>
+                    </form>
+                </div>
+                </div>
+            </div>
+            </div>
+        </div>
+    </section>
+    <!---header-->
+    <div class="container"id="scroll">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="card">
+                    <div class="card-header bg-teal text-center text-white"id="fix">
+                        <h4>About Travel Yari</h4>
+                    </div>
+                    <div class="card-body">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem laborum dicta aliquid, temporibus ullam similique consequatur laboriosam magni ex. Qui aspernatur architecto autem quo laborum dolorem numquam voluptas nam neque?</p>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem laborum dicta aliquid, temporibus ullam similique consequatur laboriosam magni ex. Qui aspernatur architecto autem quo laborum dolorem numquam voluptas nam neque?</p>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem laborum dicta aliquid, temporibus ullam similique consequatur laboriosam magni ex. Qui aspernatur architecto autem quo laborum dolorem numquam voluptas nam neque?</p>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem laborum dicta aliquid, temporibus ullam similique consequatur laboriosam magni ex. Qui aspernatur architecto autem quo laborum dolorem numquam voluptas nam neque?</p>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem laborum dicta aliquid, temporibus ullam similique consequatur laboriosam magni ex. Qui aspernatur architecto autem quo laborum dolorem numquam voluptas nam neque?</p>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem laborum dicta aliquid, temporibus ullam similique consequatur laboriosam magni ex. Qui aspernatur architecto autem quo laborum dolorem numquam voluptas nam neque?</p>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem laborum dicta aliquid, temporibus ullam similique consequatur laboriosam magni ex. Qui aspernatur architecto autem quo laborum dolorem numquam voluptas nam neque?</p>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem laborum dicta aliquid, temporibus ullam similique consequatur laboriosam magni ex. Qui aspernatur architecto autem quo laborum dolorem numquam voluptas nam neque?</p>
+                        
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem laborum dicta aliquid, temporibus ullam similique consequatur laboriosam magni ex. Qui aspernatur architecto autem quo laborum dolorem numquam voluptas nam neque?</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!---footer-->
+<footer class="p-3 mt-3 bg-teal text-white text-center">
+    <div class="container text-center">
+        <div class="row text-center">
+            <div class="col">
+                <h3>Copyright &copy;2020,Travel Yari Pvt Ltd</h3>
+                <h6>All Rights Reserved</h6>
+                <h6>Developed and Maintained by Raju Miryala</h6>
+
+            </div>
+        </div>
+    </div>
+</footer>
+</body>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js" integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf" crossorigin="anonymous">
+   $(document).ready(function () {
+        $("#tic").click(function () {
+          $("#ch").addClass("styUl");
+        });
+    });
+</script>
+</html>
